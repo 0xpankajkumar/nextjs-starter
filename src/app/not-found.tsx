@@ -1,7 +1,5 @@
-import { Default } from '@/components';
-
 const NotFound = () => {
-  return <Default text="Page Not Found" />;
+  return <div>404</div>;
 };
 
 export default NotFound;
