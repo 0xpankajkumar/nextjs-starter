@@ -1,4 +1,4 @@
-import { SCRIPTS } from '@/data';
+import { SCRIPTS } from "@/data";
 
 export const ScriptsTable = () => {
   return (

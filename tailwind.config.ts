@@ -1,64 +1,65 @@
-import type { Config } from 'tailwindcss';
-import defaultTheme from 'tailwindcss/defaultTheme';
-import tailwindcssAnimate from 'tailwindcss-animate';
+import type { Config } from "tailwindcss";
+
+import tailwindcssAnimate from "tailwindcss-animate";
+import defaultTheme from "tailwindcss/defaultTheme";
 
 const config: Config = {
-  darkMode: ['class'],
-  content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))'
-      },
-      fontFamily: {
-        sans: ['var(--font-sans)', ...defaultTheme.fontFamily.sans],
-        mono: ['var(--font-mono)', ...defaultTheme.fontFamily.mono]
-      },
-      borderRadius: {
-        lg: 'var(--radius)',
-        md: 'calc(var(--radius) - 2px)',
-        sm: 'calc(var(--radius) - 4px)'
-      },
       colors: {
-        background: 'hsl(var(--background))',
-        foreground: 'hsl(var(--foreground))',
-        card: {
-          DEFAULT: 'hsl(var(--card))',
-          foreground: 'hsl(var(--card-foreground))'
-        },
-        popover: {
-          DEFAULT: 'hsl(var(--popover))',
-          foreground: 'hsl(var(--popover-foreground))'
-        },
-        primary: {
-          DEFAULT: 'hsl(var(--primary))',
-          foreground: 'hsl(var(--primary-foreground))'
+        destructive: {
+          foreground: "hsl(var(--destructive-foreground))",
+          DEFAULT: "hsl(var(--destructive))"
         },
         secondary: {
-          DEFAULT: 'hsl(var(--secondary))',
-          foreground: 'hsl(var(--secondary-foreground))'
+          foreground: "hsl(var(--secondary-foreground))",
+          DEFAULT: "hsl(var(--secondary))"
         },
-        muted: {
-          DEFAULT: 'hsl(var(--muted))',
-          foreground: 'hsl(var(--muted-foreground))'
+        popover: {
+          foreground: "hsl(var(--popover-foreground))",
+          DEFAULT: "hsl(var(--popover))"
+        },
+        primary: {
+          foreground: "hsl(var(--primary-foreground))",
+          DEFAULT: "hsl(var(--primary))"
         },
         accent: {
-          DEFAULT: 'hsl(var(--accent))',
-          foreground: 'hsl(var(--accent-foreground))'
+          foreground: "hsl(var(--accent-foreground))",
+          DEFAULT: "hsl(var(--accent))"
         },
-        destructive: {
-          DEFAULT: 'hsl(var(--destructive))',
-          foreground: 'hsl(var(--destructive-foreground))'
+        muted: {
+          foreground: "hsl(var(--muted-foreground))",
+          DEFAULT: "hsl(var(--muted))"
         },
-        border: 'hsl(var(--border))',
-        input: 'hsl(var(--input))',
-        ring: 'hsl(var(--ring))'
+        card: {
+          foreground: "hsl(var(--card-foreground))",
+          DEFAULT: "hsl(var(--card))"
+        },
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))"
+      },
+      backgroundImage: {
+        "gradient-conic":
+          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))"
+      },
+      fontFamily: {
+        sans: ["var(--font-sans)", ...defaultTheme.fontFamily.sans],
+        mono: ["var(--font-mono)", ...defaultTheme.fontFamily.mono]
+      },
+      borderRadius: {
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+        lg: "var(--radius)"
       }
     }
   },
-  plugins: [tailwindcssAnimate]
+  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
+  plugins: [tailwindcssAnimate],
+  darkMode: ["class"]
 };
 
 export default config;

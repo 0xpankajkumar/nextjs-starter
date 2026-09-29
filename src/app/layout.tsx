@@ -1,21 +1,20 @@
-import type { Metadata } from 'next';
-import { Inter, JetBrains_Mono } from 'next/font/google';
+import type { Metadata } from "next";
 
-import { APP_DESCRIPTION, APP_NAME, APP_URL } from '@/data';
+import { APP_DESCRIPTION, APP_NAME, APP_URL } from "@/data";
+import { JetBrains_Mono, Inter } from "next/font/google";
+import "@/styles/globals.css";
 
-import '@/styles/globals.css';
-
-const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
+const inter = Inter({ variable: "--font-sans", subsets: ["latin"] });
 const jetbrainsMono = JetBrains_Mono({
-  subsets: ['latin'],
-  variable: '--font-mono'
+  variable: "--font-mono",
+  subsets: ["latin"]
 });
 
 export const metadata: Metadata = {
+  title: { template: `%s | ${APP_NAME}`, default: APP_NAME },
   metadataBase: new URL(APP_URL),
-  title: { default: APP_NAME, template: `%s | ${APP_NAME}` },
-  description: APP_DESCRIPTION,
-  manifest: '/site.webmanifest'
+  manifest: "/site.webmanifest",
+  description: APP_DESCRIPTION
 };
 
 const RootLayout = ({

@@ -9,15 +9,15 @@
     "lint": "next lint",
     "types:check": "tsc --pretty --noEmit",
     "prettier:check": "prettier --check .",
-    "lint:check": "eslint . --ext ts --ext tsx --ext js",
     "prettier:format": "prettier --write .",
+    "lint:check": "eslint . --ext ts --ext tsx --ext js",
+    "lint:fix": "eslint . --ext ts --ext tsx --ext js --fix",
     "test:all": "pnpm run types:check && pnpm run prettier:check && pnpm run lint:check",
     "prepare": "husky install",
     "format": "prettier --write ."
   },
   "dependencies": {
     "@plaiceholder/next": "^3.0.0",
-    "@tanstack/react-query": "^5.81.5",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.513.0",

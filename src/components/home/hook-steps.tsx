@@ -1,4 +1,4 @@
-import { HOOKS } from '@/data';
+import { HOOKS } from "@/data";
 
 export const HookSteps = () => {
   return (
@@ -9,8 +9,8 @@ export const HookSteps = () => {
           <ol className="mt-4 divide-y divide-border border-y border-border">
             {group.steps.map((step, index) => (
               <li
-                key={step.command}
                 className="grid grid-cols-[2rem_1fr] gap-x-2 py-4"
+                key={step.command}
               >
                 <span className="font-mono text-sm text-muted-foreground">
                   {index + 1}
@@ -30,7 +30,7 @@ export const HookSteps = () => {
         </div>
       ))}
       <p className="max-w-xl text-muted-foreground">
-        If the format check fails, run{' '}
+        If the format check fails, run{" "}
         <code className="rounded bg-secondary px-1.5 py-0.5 font-mono text-sm text-foreground">
           pnpm prettier:format
         </code>

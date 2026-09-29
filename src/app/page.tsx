@@ -1,14 +1,14 @@
 import {
-  Hero,
-  HookSteps,
-  ProjectTree,
-  ScriptsTable,
-  Section,
   SetupChecklist,
+  ScriptsTable,
+  ProjectTree,
   SiteFooter,
   SiteHeader,
-  StackList
-} from '@/components';
+  HookSteps,
+  StackList,
+  Section,
+  Hero
+} from "@/components";
 
 const Home = () => {
   return (
@@ -17,37 +17,37 @@ const Home = () => {
       <main>
         <Hero />
         <Section
-          id="layout"
-          title="Project layout"
           intro="Every folder has one job. Most are empty on purpose, ready for your code."
+          title="Project layout"
+          id="layout"
         >
           <ProjectTree />
         </Section>
         <Section
-          id="stack"
-          title="What is wired up"
           intro="The tools that are installed and how they are configured."
+          title="What is wired up"
+          id="stack"
         >
           <StackList />
         </Section>
         <Section
-          id="checks"
-          title="Checks that run for you"
           intro="Git hooks keep broken code out of the repository."
+          title="Checks that run for you"
+          id="checks"
         >
           <HookSteps />
         </Section>
         <Section
-          id="scripts"
-          title="Commands"
           intro="Everything runs through pnpm."
+          title="Commands"
+          id="scripts"
         >
           <ScriptsTable />
         </Section>
         <Section
-          id="get-started"
-          title="Make it yours"
           intro="Six things to do before you build on top of it."
+          title="Make it yours"
+          id="get-started"
         >
           <SetupChecklist />
         </Section>

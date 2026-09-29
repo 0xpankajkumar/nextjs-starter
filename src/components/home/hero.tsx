@@ -1,10 +1,10 @@
-import { REPO_URL } from '@/data';
+import { REPO_URL } from "@/data";
 
 const COMMANDS = [
   `git clone ${REPO_URL}`,
-  'cd nextjs-starter',
-  'pnpm install',
-  'pnpm dev'
+  "cd nextjs-starter",
+  "pnpm install",
+  "pnpm dev"
 ];
 
 export const Hero = () => {
@@ -20,16 +20,16 @@ export const Hero = () => {
         </p>
         <div className="mt-8 flex flex-wrap gap-3">
           <a
-            href="#get-started"
             className="rounded-md bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground hover:bg-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+            href="#get-started"
           >
             Get started
           </a>
           <a
+            className="rounded-md border border-border bg-card px-5 py-2.5 text-sm font-medium hover:bg-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+            rel="noreferrer"
             href={REPO_URL}
             target="_blank"
-            rel="noreferrer"
-            className="rounded-md border border-border bg-card px-5 py-2.5 text-sm font-medium hover:bg-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
           >
             View on GitHub
           </a>
@@ -40,7 +40,7 @@ export const Hero = () => {
         <pre className="overflow-x-auto rounded-lg bg-[#0F1720] p-5 font-mono text-[13px] leading-7 text-[#E7ECF3]">
           <code>
             {COMMANDS.map((command) => (
-              <span key={command} className="block whitespace-pre">
+              <span className="block whitespace-pre" key={command}>
                 <span className="select-none text-[#7C8AA0]">$ </span>
                 {command}
               </span>
@@ -48,7 +48,7 @@ export const Hero = () => {
           </code>
         </pre>
         <p className="mt-4 max-w-sm text-sm text-muted-foreground">
-          You are looking at{' '}
+          You are looking at{" "}
           <code className="font-mono text-foreground">src/app/page.tsx</code>.
           Save a change and the browser updates.
         </p>
