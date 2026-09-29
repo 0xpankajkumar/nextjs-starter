@@ -13,8 +13,7 @@
     "prettier:format": "prettier --write .",
     "test:all": "pnpm run types:check && pnpm run prettier:check && pnpm run lint:check",
     "prepare": "husky install",
-    "format": "prettier --write .",
-    "build:check": "next build"
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@plaiceholder/next": "^3.0.0",
