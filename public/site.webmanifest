@@ -1,6 +1,6 @@
 {
-  "name": "",
-  "short_name": "",
+  "name": "Nextjs Starter",
+  "short_name": "Starter",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",

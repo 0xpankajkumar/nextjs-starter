@@ -1,8 +1,18 @@
+import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 
-import '../styles/globals.css';
+import { APP_DESCRIPTION, APP_NAME, APP_URL } from '@/data';
+
+import '@/styles/globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
+
+export const metadata: Metadata = {
+  metadataBase: new URL(APP_URL),
+  title: { default: APP_NAME, template: `%s | ${APP_NAME}` },
+  description: APP_DESCRIPTION,
+  manifest: '/site.webmanifest'
+};
 
 const RootLayout = ({
   children
