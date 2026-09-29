@@ -1,0 +1,9 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo "Running production build before push..."
+
+pnpm run build || {
+  echo "Build failed. Fix the errors listed above and push again."
+  exit 1
+}

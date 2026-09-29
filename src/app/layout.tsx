@@ -1,8 +1,21 @@
-import { Inter } from 'next/font/google';
+import type { Metadata } from "next";
 
-import '../styles/globals.css';
+import { APP_DESCRIPTION, APP_NAME, APP_URL } from "@/data";
+import { JetBrains_Mono, Inter } from "next/font/google";
+import "@/styles/globals.css";
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ variable: "--font-sans", subsets: ["latin"] });
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-mono",
+  subsets: ["latin"]
+});
+
+export const metadata: Metadata = {
+  title: { template: `%s | ${APP_NAME}`, default: APP_NAME },
+  metadataBase: new URL(APP_URL),
+  manifest: "/site.webmanifest",
+  description: APP_DESCRIPTION
+};
 
 const RootLayout = ({
   children
@@ -11,10 +24,10 @@ const RootLayout = ({
 }>) => {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <div className="flex h-screen items-center justify-center bg-gradient-to-b from-gray-950 to-gray-900 p-4 sm:p-10">
-          {children}
-        </div>
+      <body
+        className={`${inter.variable} ${jetbrainsMono.variable} font-sans antialiased`}
+      >
+        {children}
       </body>
     </html>
   );

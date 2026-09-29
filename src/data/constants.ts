@@ -1,10 +1,9 @@
 // Environments
 export const ENV = process.env.ENVIRONMENT;
 
-// Environment Variables
-
 // Application
-export const APP_NAME = 'Nextjs Template';
-export const APP_DESCRIPTION = `${APP_NAME} is a template for nextjs projects.`;
-export const APP_URL = 'https://nextjs-template.vercel.app';
-export const AUTHOR = 'Nextjs Template';
+export const APP_NAME = "Nextjs Starter";
+export const APP_DESCRIPTION = `${APP_NAME} is a starter for Next.js projects.`;
+export const APP_URL =
+  process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000";
+export const AUTHOR = "Pankaj Kumar";
